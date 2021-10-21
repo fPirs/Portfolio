@@ -1,0 +1,22 @@
+span {
+    font-size: inherit;
+    text-shadow: rgba(252, 247, 247, 0.322) 10px 0px 22px;
+}
+
+span.anim{
+    opacity: 0;
+    animation: fadeIn 0.5s  linear forwards;
+    animation-delay: calc(40ms * var(--i));
+    
+    
+}
+span.anim:hover{
+    color:#3f51b5;
+}
+
+// ANIMATIONS ==============================
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    
+}

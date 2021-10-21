@@ -1,0 +1,26 @@
+.toolbar {
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 4rem;
+    a {
+        margin-right: 1rem;
+        font-size: 1.1rem;
+        color: #222222;// #888888;
+    }
+}
+
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #3c448d;
+}

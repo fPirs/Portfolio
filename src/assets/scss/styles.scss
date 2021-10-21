@@ -1,68 +1,53 @@
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
+@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+@include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$page2-primary: mat.define-palette(mat.$indigo-palette);
-$page2-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$MyPorfolio-primary: mat-palette($mat-green);
+$MyPorfolio-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$page2-warn: mat.define-palette(mat.$red-palette);
+$MyPorfolio-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$page2-theme: mat.define-light-theme((
+$MyPorfolio-theme: mat-light-theme((
   color: (
-    primary: $page2-primary,
-    accent: $page2-accent,
-    warn: $page2-warn,
+    primary: $MyPorfolio-primary,
+    accent: $MyPorfolio-accent,
+    warn: $MyPorfolio-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($page2-theme);
+@include angular-material-theme($MyPorfolio-theme);
 
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Syncopate:wght@400;700&display=swap');
+@import 'variables';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-// ----------------------------------------
-.main {
-  
-}
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
 html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Syncopate', sans-serif;
-}
-.d.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  font-family: 'Poppins', sans-serif;
 }
 .d-flex { display: flex; }
-.f-column {flex-direction: column;}
+.p-relative { position: relative; }
+.flex-column {flex-direction: column;}
 .f-center {
   display: flex;
   align-items: center;
@@ -71,26 +56,16 @@ html, body{
 .fill { flex: 1 1 auto; }
 .h-100 { height: 100%; }
 .w-100 { width: 100%; }
-.o-auto {overflow: auto;}
+.no-select, img {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
 
-
-/*==========================*/
-
-$spacer: 16px;
-$area-size-list: (
-  margin: "m",
-  padding: "p"
-);
-$spacer-size: (
-  0: 0,
-  1: .25,
-  2: .5,
-  3: 1,
-  4: 1.5,
-  5: 3,
-  6: 18
-);
-$spacing-content: $spacer;
 // Bootstrap Spacing
 @each $area-property, $area-tag in $area-size-list{
   @each $counter, $knob-value in $spacer-size{
@@ -102,4 +77,6 @@ $spacing-content: $spacer;
       .#{$area-tag + y}-#{$counter}{ #{$area-property + -top}: $spacer * $knob-value; #{$area-property + -bottom}: $spacer * $knob-value !important; }
   }
 }
+
+
 

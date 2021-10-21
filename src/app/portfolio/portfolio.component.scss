@@ -1,0 +1,55 @@
+@import '../../assets/scss/variables';
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-content { padding: 8rem; }
+.right-content { 
+    width: 50%;
+    grid-column: 2;
+    height: 100%;
+    padding-right: 3rem; }
+.home-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo-label {
+    color: #3c448d;
+    font-weight: bolder;
+    font-size: 4rem;
+    line-height: 62px;
+    margin: 1rem 0;
+}
+.home-bg-image {
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    img:last-child {
+        left: 25%;
+        bottom: 0%;
+        width: 50vh;
+        position: absolute;
+    }
+       
+}
+.btn {
+    cursor: pointer;
+    border: 0;
+    background: #3c3d8d;
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    &.rised {
+        box-shadow: 0px 6px 10px 0px #2a2b4e;
+    }
+}
+
+.alberi{
+    width: 105vh;
+}

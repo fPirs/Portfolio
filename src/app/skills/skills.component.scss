@@ -1,0 +1,229 @@
+.container{
+    height: 100%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-content { 
+    padding: 3rem;
+    color: cornflowerblue; }
+.right-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+ }
+
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+.container .card{
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+                inset -5px -5px 15px rgba(255,255,255,0.1),
+                5px 5px 15px rgba(0,0,0,0.3),
+                -5px -5px 15px rgba(255,255,255,0.1);
+    border-radius: 15px;
+    margin: 30px;
+}
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+}
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #3f4991;
+    border: 2px solid #1e1f23;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container .card .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+.container .card .box:hover{
+    transform: translateY(-50px);
+    box-shadow: 0 40px 70px rgba(0,0,0,0.6);
+}
+
+.container .card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+.insiderbox{
+     width: 100%;
+     display: flex;
+    position: absolute;
+    height: 100%;
+    /* width: fit-content; */
+     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    }
+
+.contentwr{
+    padding: 20px;
+    text-align:start;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+}
+
+.text{
+    position: absolute;
+    top: -45px;
+    right: -15px;
+    font-size: 2.2em;
+    color: rgba(255, 255, 255, 0.05);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.skills{
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    font-size: 4em;
+    color: rgb(245, 243, 243);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+h3{
+    font: 400 25px / 28px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+    color: white;
+}
+
+.wrap{
+    margin-top: 20px;
+    max-width: 250px;
+    }
+    .html{
+        display: inline-block;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-size: 15px;
+        width: 100%;
+        position: relative;
+    }
+    .bar{
+        margin-top: 5px;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 6px;
+        background-color: #a5a4a426;
+        border-radius: 50px;
+        box-shadow: -2px 3px 20px -6px #001baf;
+    }
+    .bar:before{
+        position: absolute;
+        content: "";
+        width: 80%;
+        height: 100%;
+        background: linear-gradient(to left, #8f8f8f, #303033);
+        border-radius: 50px;
+        animation: bar 1.3s ease;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        place-content: center;
+        align-items: flex-start;
+    }
+
+    .logoct{
+        height: 600px;
+        width: 720px;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+    .bg-right{
+        position: relative;
+        height: 100%;
+    }
+
+    .bg-skills{
+        position: absolute;
+        width: 600px;
+        top: 250px;
+        left: -110px;
+
+    }
+
+    .table-s{
+        position: absolute;
+        width: 400px;
+        top: 130px;
+        right: 180px;
+    }
+    
+    
+   .bg-table {
+        left: 25%;
+        bottom: 0%;
+        width: 50vh;
+        position: absolute;
+        
+        margin-top: 40px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+}
+       
+
+
+    
+    @keyframes bar{
+        from{
+            width: 0;
+        }
+    }
+    .html .bar::before{
+        width: 75%;
+    }
+    .javascript .bar::before{
+        width: 45%;
+    }
+    .scss .bar::before{
+        width: 65%;
+    }
+    .angular .bar::before{
+        width: 55%;
+    }
