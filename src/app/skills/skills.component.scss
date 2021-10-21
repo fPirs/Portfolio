@@ -9,8 +9,7 @@
     color: cornflowerblue; }
 .right-content {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    padding: 3rem;
  }
 
 
@@ -174,8 +173,10 @@ h3{
     }
 
     .bg-right{
+        display: flex;
         position: relative;
         height: 100%;
+        align-items: center;
     }
 
     .bg-skills{
@@ -195,17 +196,11 @@ h3{
     
     
    .bg-table {
-        left: 25%;
-        bottom: 0%;
-        width: 50vh;
-        position: absolute;
-        
-        margin-top: 40px;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        position: relative;
-}
+    width: 90vh;
+    position: absolute;
+    right: 90px;
+   }
+ 
        
 
 
