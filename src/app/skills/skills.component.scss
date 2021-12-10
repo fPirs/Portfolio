@@ -5,13 +5,39 @@
     grid-template-columns: 1fr 1fr;
 }
 .left-content { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 3rem;
     color: cornflowerblue; }
-.right-content {
-    overflow: hidden;
-    padding: 3rem;
- }
 
+.right-content {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 50%;
+        grid-column: 2;
+        height: 100%;
+        padding-right: 3rem; 
+ }
+ .home-bg-image {
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    img:last-child {
+      
+        bottom: 0%;
+        width: 50vh;
+        position: absolute;
+    }
+       
+}
+.alberi{
+    width: 105vh;
+}
 
 .container1{
     display: flex;
@@ -23,8 +49,8 @@
 }
 .container .card{
     position: relative;
-    min-width: 320px;
-    height: 440px;
+    min-width: 450px;
+    height: 600px;
     box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
                 inset -5px -5px 15px rgba(255,255,255,0.1),
                 5px 5px 15px rgba(0,0,0,0.3),
@@ -124,6 +150,7 @@ h3{
 }
 
 .wrap{
+    width: 100%;
     margin-top: 20px;
     max-width: 250px;
     }
@@ -174,21 +201,22 @@ h3{
 
     .bg-right{
         display: flex;
-        position: relative;
-        height: 100%;
+        align-content: center;
         align-items: center;
+        justify-content: center;
+        height: 100%;
+        
     }
 
     .bg-skills{
-        position: absolute;
-        width: 600px;
+        max-width: 600px;
         top: 250px;
         left: -110px;
 
     }
 
     .table-s{
-        position: absolute;
+    
         width: 400px;
         top: 130px;
         right: 180px;

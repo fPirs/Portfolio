@@ -1,8 +1,14 @@
 .content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     height: 100%;
     overflow: hidden;
 }
 .cont-title{
+    position: absolute;
+    top: 2px;
     padding-top: 50px;;
     text-align: center;
 }
@@ -14,68 +20,61 @@ line-height: 62px;
 margin: 1rem 0;
 }
 
-.cont-img-contact{
-    align-content: center;
-    margin-top: 50px;
-    display: grid;
-    height: 60%;
-    position: relative;
-    grid-template-columns: 1fr 1fr;
-}
-.img{
-    width: 50%;
-    grid-column: 1;
+.left-content {
     height: 100%;
-    position: absolute;
-}
-.contact{
-    grid-column: 2;
-    width: 100%;
+    width: 50%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding-left: 1rem; 
+}
+.box-contact{
+    display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
-
-}.text-contact{
-    box-shadow: 8px 5px 22px -8px;
-    width: 75%;
-    margin-left: 50px;
+    width: 50%;
+    height: 30%;
 }
-
-.box{
+.e_mail{
+    font-size: 25px;
+    align-content: center;
+    /* justify-content: center; */
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
+    flex-direction: row;
+    align-items: center;
 }
-.cont-box{
+.mobile{
+    font-size: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    align-items: baseline;
-
-}
-.linkedin{
-    cursor: pointer;
-    width: 60px;
-
+    /* flex-direction: row; */
+    align-items: center;
+    align-content: center;
 }
 
-h2{
-    font-size: 38px;
-    margin:10px;
 
+
+
+.right-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    grid-column: 2;
+    height: 100%;
+    padding-right: 1rem; 
 }
-p{
-    font-size: 20px;
-    padding: 8px 24px;
-    font-family: monospace;
-}
-.mat-icon {
-    font-size: 50px;
-    padding-bottom: 15px;
-    width: 40px !important; 
-}
-.mat-raised-button{
+
+.cont-img-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
     width: 100%;
+}
+.img{
+    height: 70%;
 }

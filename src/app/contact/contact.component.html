@@ -1,38 +1,26 @@
 <div class="content">
     <div class="cont-title">
-        <div class="title">
             <app-wavy class="text-1" [value]="'Contact'" [random]="true"></app-wavy>
-        </div>
     </div>
-    <div class="cont-img-contact">
-        <div class="contact">
-            <div class="text-contact">
-                <div class="box d-flex">
-                    <div class="linkedin"><a href="https://www.linkedin.com/in/francesco-roberto-pirri-801246207/" target="_blank">
-                        <img src="/assets/img/linkedin.svg" alt=""></a></div>
-                    <div class="cont-box">
-                        <mat-icon>mail</mat-icon>
-                        <h2>Mail:</h2>
-                        <p>Francescorobertopirri@gmail.com</p> 
-                        <mat-icon>phone_iphone</mat-icon>
-                        <h2>Mobile:</h2>
-                        <p>345/4521660</p>
-                        <div class="box">
-                    </div>
-                        
-                    <a mat-raised-button color="primary"  (click)="download()">Download</a>
-                </div>
-                </div>
-                <div class="box d-flex">
-                    <div class="cont-box">
-                       
-                    </div>
-                </div>
+    <div class="left-content">
+        <div class="box-contact">
+            <div class="e_mail">
+                <mat-icon>mail</mat-icon>
+                <h2>Mail:</h2>
+                <p>Francescorobertopirri@gmail.com</p>
                 
-               
             </div>
+            <div class="mobile">
+                <mat-icon>phone_iphone</mat-icon>
+                <h2>Mobile:</h2>
+                <p>+393454521660</p>
+            </div>
+            <a mat-raised-button color="primary"  (click)="download()">Download</a>
         </div>
-        <img class="img" src="/assets/img/img-contact.svg" alt="">
     </div>
-    
+    <div class="right-content">
+        <div class="cont-img-contact">
+            <img class="img" src="/assets/img/img-contact.svg" alt="">
+        </div>
+    </div>
 </div>

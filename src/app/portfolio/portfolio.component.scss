@@ -5,11 +5,16 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 .left-content { padding: 8rem; }
-.right-content { 
+.right-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     width: 50%;
     grid-column: 2;
     height: 100%;
-    padding-right: 3rem; }
+    padding-right: 3rem; 
+}
 .home-container {
     height: 100%;
     display: flex;
