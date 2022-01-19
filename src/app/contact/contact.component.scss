@@ -21,37 +21,143 @@ margin: 1rem 0;
 }
 
 .left-content {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    height: 40%;
+    width: 40%;
     padding-left: 1rem; 
 }
-.box-contact{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 50%;
-    height: 30%;
+.collaps_box{
+	max-width: 400px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
+	border-radius: 5px;
+	overflow: hidden;
+	background: #3f51b5;
 }
-.e_mail{
-    font-size: 25px;
-    align-content: center;
-    /* justify-content: center; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
+.collaps_label,
+.collaps_content{
+	padding: 14px 20px;
 }
-.mobile{
-    font-size: 25px;
-    display: flex;
-    /* flex-direction: row; */
-    align-items: center;
-    align-content: center;
+
+.collaps_label{
+	user-select: none;
+	display: block;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	position:relative;
+	transition: background 0.1s;
+
 }
+
+.collaps_label:hover{
+	background: #4f61c9;
+}
+
+.collaps_label::after{
+	content: "V";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	width: 12px;
+	height: 6px;
+	transition: transform 0.4s;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.collaps_content{
+	background: #fff;
+	line-height: 1.6;
+	font-size: 0.85em;
+	display: none;
+}
+
+.collaps_input{
+	display: none;
+
+}
+
+
+.collaps_input:checked ~ .collaps_content{
+	display: block;
+	
+}
+
+.collaps_input:checked ~ .collaps_label::after{
+	transform: translateY(-50%) rotate(0.5turn);
+
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.collaps_box2{
+	max-width: 400px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 );
+	border-radius: 5px;
+	background: #3f51b5;
+}
+
+.collaps_label2,
+.collaps_content2{
+	padding: 14px 20px;
+}
+
+.collaps_label2{
+	user-select: none;
+	display: block;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	position:relative;
+	transition: background 0.1s;
+
+}
+
+.collaps_label2:hover{
+	background: #4f61c9;
+}
+
+.collaps_label2::after{
+	content: "V";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	width: 12px;
+	height: 6px;
+	transition: transform 0.4s;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.collaps_content2{
+	background: #fff;
+	line-height: 1.6;
+	font-size: 0.85em;
+	
+	
+}
+
+
+.collaps_input2{
+	display: none;
+
+}
+
+.expandable2{
+	display: none;
+}
+
+.collaps_input2:checked ~ .collaps_content2 .expandable2{
+	display: table-row;
+	color: red;
+	font-weight: bold;
+}
+
+.collaps_input2:checked ~ .collaps_label2::after{
+	transform: translateY(-50%) rotate(0.5turn);
+
+}
+
 
 
 
